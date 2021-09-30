@@ -1,2 +1,9 @@
-Yaml:
-  name: "Real yaml"
+---
+apiVersion: v1
+kind: Route
+metadata:
+  name: react-intro-route
+spec:
+  to:
+    kind: Service
+    name: react-intro-svc
