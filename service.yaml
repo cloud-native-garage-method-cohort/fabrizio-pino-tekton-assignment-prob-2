@@ -1,14 +1,8 @@
 apiVersion: v1
-kind: Service
+kind: Route
 metadata:
-    labels:
-      app: react-intro
-    name: react-intro-svc
+  name: react-intro-route
 spec:
-    ports:
-    - port: 80
-      protocol: TCP
-      targetPort: 8080
-    selector:
-      app: react-intro
-    type: ClusterIP
+  to:
+    kind: Service
+    name: react-intro-svc
